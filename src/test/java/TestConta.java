@@ -130,7 +130,6 @@ public class TestConta{
         double[] extrato = conta.verExtrato();
         boolean igual = true;
         for(int i = 0; i < extratoCorreto.length; i++){
-            System.out.println(extrato[i] + " " +  extratoCorreto[i]);
             igual &= Double.compare(extrato[i], extratoCorreto[i]) == 0;
 
         }

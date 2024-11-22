@@ -3,8 +3,12 @@
 A idea desta atividade é que você seja capaz de implementar as funcionalidades
 básicas de uma conta bancária.
 
-![Conta Bancária](contabancaria.jpg)
-<a href="https://www.freevector.com/free-iconic-atm-vectors-25886">Fonte</a>
+<figure>
+  <img src="contabancaria.jpg" alt="ilustração de operações típicas de contas bancárias">
+  <figcaption style="text-align: center"><a href="https://www.freevector.com/free-iconic-atm-vectors-25886">Image obtida em freevector.com</a></figcaption>
+</figure>
+
+
 - [Requisitos](#requisitos)
 - [Diagrama](#diagrama)
 - [Exemplo de execução](#exemplo-de-execução)
@@ -33,7 +37,26 @@ básicas de uma conta bancária.
   
 
 ## Diagrama
-![Diagrama UML](graph.png)
+
+```mermaid
+classDiagram
+    class Conta {
+        - int numero
+        - double saldo
+        - double limite
+        - double[] extrato
+        - int operacoesRealizadas
+
+        + Conta(int numero, double saldoInicial)
+        + double getSaldo()
+        + boolean sacar(double valor)
+        + boolean depositar(double valor)
+        + boolean transferir(Conta destino, double valor)
+        + double[] verExtrato()
+        + String toString()
+    }
+```
+
 ## Exemplo de execução 
 
 ```java
